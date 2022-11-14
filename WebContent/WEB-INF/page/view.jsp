@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원정보</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="container" align="center">
+	<div class="col-lg-6" align="center">
+		<br><br><br>
+		<h2>회원 정보</h2>
+		<form id="signupform" method="post" action="">
+			<div class="form-group" align="left">
+				<label for="id">아이디</label>
+				<input type="text" class="form-control" id="id" name="id" value = "${ userinfo.id }" readonly>
+			</div>
+			<div class="form-group" align="left">
+				<label for="pw">비밀번호</label>
+				<input type="text" class="form-control" id="pw" name="pw" value = "${ userinfo.pw }" readonly>
+			</div>
+
+			<div class="form-group" align="left">
+				<label for="name">이름</label>
+				<input type="text" class="form-control" id="name" name="name" value = "${ userinfo.name }" readonly>
+			</div>
+			<div class="form-group" align="left">
+				<label for="address">주소</label>
+				<input type="text" class="form-control" id="address" name="address" value = "${ userinfo.address }" readonly>
+			</div>
+			<div class="form-group" align="left">
+				<label for="phone">전화번호</label>
+				<input type="text" class="form-control" id="phone" name="phone" value = "${ userinfo.phone }" readonly>
+			</div>
+			
+			<button type="button" class="btn btn-primary" onclick="javascript:location.href = '${root}/user.do?act=mvmodify';">수정하기</button>
+			<button type="button" class="btn btn-warning" onclick="javascript:location.href = '${root}/user.do?act=main';">메인화면</button>
+		</form>
+	</div>
+</div>
+
+
+</body>
+</html>

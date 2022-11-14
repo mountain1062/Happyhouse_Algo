@@ -1,0 +1,53 @@
+/build/
+/bin/
+target/
+.idea
+classes/
+  
+# OS Files #
+.DS_Store
+  
+*.class
+  
+######################
+# Windows
+######################
+  
+# Windows image file caches
+Thumbs.db 
+  
+# Folder config file
+Desktop.ini
+  
+######################
+# OSX
+######################
+  
+.DS_Store
+.svn
+  
+# Thumbnails
+._*
+  
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+  
+  
+######################
+# Eclipse
+######################
+  
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+/.settings
+.classpath
+
